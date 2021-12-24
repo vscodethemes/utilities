@@ -149,11 +149,11 @@ export const queryUpdatedExtensions = async (
     });
     return results;
   } catch (err) {
-    if (err instanceof Error) {
-      throw new Error(
-        `MarketplaceAPI.queryUpdatedExtensions failed: ${err.message}`,
-      );
-    }
+    throw new Error(
+      `MarketplaceAPI.queryUpdatedExtensions failed: ${
+        err instanceof Error ? err.message : err
+      }`,
+    );
   }
 };
 
@@ -170,11 +170,11 @@ export const queryExtensionId = async (extensionId: string) => {
     });
     return results;
   } catch (err) {
-    if (err instanceof Error) {
-      throw new Error(
-        `MarketplaceAPI.queryExtensionId failed for ${extensionId}: ${err.message}`,
-      );
-    }
+    throw new Error(
+      `MarketplaceAPI.queryExtensionId failed for ${extensionId}: ${
+        err instanceof Error ? err.message : err
+      }`,
+    );
   }
 };
 
@@ -191,10 +191,10 @@ export const queryExtensionSlug = async (extensionSlug: string) => {
     });
     return results;
   } catch (err) {
-    if (err instanceof Error) {
-      throw new Error(
-        `MarketplaceAPI.queryExtensionSlug failed for ${extensionSlug}: ${err.message}`,
-      );
-    }
+    throw new Error(
+      `MarketplaceAPI.queryExtensionSlug failed for ${extensionSlug}: ${
+        err instanceof Error ? err.message : err
+      }`,
+    );
   }
 };
