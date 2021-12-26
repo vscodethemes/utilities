@@ -198,3 +198,15 @@ export const queryExtensionSlug = async (extensionSlug: string) => {
     );
   }
 };
+
+export const extractStatistic = (
+  extensionResult: ExtensionQueryResult,
+  name: string,
+): number => {
+  if (!extensionResult.statistics) return 0;
+  const stat = extensionResult.statistics.find(
+    (s: any) => s.statisticName === name,
+  );
+  if (!stat) return 0;
+  return stat.value;
+};
