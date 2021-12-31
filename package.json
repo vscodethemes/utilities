@@ -1,6 +1,6 @@
 {
   "name": "@vscodethemes/utilities",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "build",
   "scripts": {
     "start": "tsc -b -w --preserveWatchOutput",
@@ -11,10 +11,12 @@
     "build"
   ],
   "dependencies": {
+    "color": "^4.1.0",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "@types/color": "^3.0.2",
     "@types/node": "^17.0.4",
     "@types/node-fetch": "^2.3.7",
     "eslint": "^7.23.0",
