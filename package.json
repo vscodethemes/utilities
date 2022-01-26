@@ -1,6 +1,6 @@
 {
   "name": "@vscodethemes/utilities",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "build",
   "scripts": {
     "start": "tsc -b -w --preserveWatchOutput",

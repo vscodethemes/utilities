@@ -157,6 +157,43 @@ export const queryUpdatedExtensions = async (
   }
 };
 
+export const queryPublishedExtensions = async (
+  opts: UpdatedExtensionsQueryOptions,
+) => {
+  try {
+    const results = query({
+      ...opts,
+      direction: 1,
+      sortBy: 'publishedDate',
+      criteria: [
+        {
+          filterType: 8,
+          value: 'Microsoft.VisualStudio.Code',
+        },
+        {
+          filterType: 10,
+          value: 'target:"Microsoft.VisualStudio.Code" ',
+        },
+        {
+          filterType: 12,
+          value: '37888',
+        },
+        {
+          filterType: 5,
+          value: 'Themes',
+        },
+      ],
+    });
+    return results;
+  } catch (err) {
+    throw new Error(
+      `MarketplaceAPI.queryUpdatedExtensions failed: ${
+        err instanceof Error ? err.message : err
+      }`,
+    );
+  }
+};
+
 export const queryExtensionId = async (extensionId: string) => {
   try {
     const results = await query({
