@@ -1,6 +1,6 @@
 {
   "name": "@vscodethemes/utilities",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "main": "build",
   "scripts": {
     "start": "tsc -b -w --preserveWatchOutput",
@@ -12,11 +12,15 @@
   ],
   "dependencies": {
     "color": "^4.1.0",
+    "colord": "^2.9.2",
     "dotenv": "^8.2.0",
+    "escape-html": "^1.0.3",
+    "html-entities": "^2.3.3",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "@types/color": "^3.0.2",
+    "@types/escape-html": "^1.0.1",
     "@types/node": "^17.0.4",
     "@types/node-fetch": "^2.3.7",
     "eslint": "^7.23.0",
