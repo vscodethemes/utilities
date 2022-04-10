@@ -8,6 +8,7 @@ const tokenFontSize = 12.5;
 const tokenLineHeight = 17;
 const tokenXOffset = 50;
 const tokenYOffset = 58;
+const editorLetterSpacing = 0.2;
 
 export interface Theme {
   displayName: string;
@@ -166,7 +167,7 @@ export const renderThemePreviewSvg = ({
     t.titleBarActiveForeground
   }" font-size="${titleFontSize}">${escapeHtml(t.displayName)}</text>`;
 
-  svg += `<text font-family="${monoFontFamily}" fill="${t.editorForeground}" font-size="${tokenFontSize}">`;
+  svg += `<text font-family="${monoFontFamily}" fill="${t.editorForeground}" font-size="${tokenFontSize}" letter-spacing="${editorLetterSpacing}">`;
   for (let i = 0; i < tokens.length; i++) {
     const lineTokens = tokens[i];
     const y = i * tokenLineHeight + tokenYOffset;
